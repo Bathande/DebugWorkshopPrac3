@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading;
@@ -117,7 +118,8 @@ namespace debugws3
         }
         j++;
       }
-
+     DataTable tables = new DataTable();
+     result = Convert.ToDouble(tables.Compute(input,null));
       return new Result(result, "");
     }
 
